@@ -16,7 +16,7 @@ module.exports.questions = [
       "Do you want full OSM response || database specific dataset || just co ordinates in a json file ?",
     choices: [
       "only-co-ordinates",
-      "osm-addresses",
+      "osm-addresses-default",
       "database-specific-co-ordinates",
     ],
   },
@@ -33,7 +33,7 @@ module.exports.questions = [
     type: "input",
     name: "howManyRows",
     message: "How many co-ordinates you want to generate?",
-    when: (answers) => answers["whichFromat"] !== "osm-addresses",
+    when: (answers) => answers["whichFromat"] !== "osm-addresses-default",
     validate(input) {
       if (input != null && input != "" && Number.isInteger(parseInt(input))) {
         return true;
