@@ -54,7 +54,7 @@ const getformattedCordinates = (
       parseFloat(longitude) +
       (distance / (111.325 * Math.cos(parseFloat(latitude)))) * Math.sin(angle);
     if (whichFromat == "only-co-ordinates") {
-      finalDataSet.push([lat, lon]);
+      finalDataSet.push([lon, lat]);
     } else if (whichFromat == "database-specific-co-ordinates") {
       if (whichDatabase == "MongoDB") {
         finalDataSet.push({
