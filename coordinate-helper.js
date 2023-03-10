@@ -4,7 +4,7 @@ const ObjectId = mongodb.ObjectId;
 const fs = require("fs");
 
 const answerRecievedAndGenerate = (answers) => {
-  fetchCoOrdinates("Dhaka").then((response) => {
+  fetchCoOrdinates(answers.whichAddress).then((response) => {
     let fetchFormattedData = response;
     if (response) {
       if (answers.whichFromat != "osm-addresses") {
