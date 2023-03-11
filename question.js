@@ -13,11 +13,11 @@ module.exports.questions = [
     type: "list",
     name: "whichFromat",
     message:
-      "Do you want full OSM response || database specific dataset || just co ordinates in a json file ?",
+      "Do you want only coordinates || database specific coordinates || OSM response in a json file ?",
     choices: [
       "only-co-ordinates",
-      "osm-addresses-default",
       "database-specific-co-ordinates",
+      "osm-addresses-default",
     ],
   },
   {
@@ -32,7 +32,7 @@ module.exports.questions = [
   {
     type: "input",
     name: "howManyRows",
-    message: "How many co-ordinates you want to generate?",
+    message: "How many pairs of long,lat you want to generate?",
     when: (answers) => answers["whichFromat"] !== "osm-addresses-default",
     validate(input) {
       if (input != null && input != "" && Number.isInteger(parseInt(input))) {

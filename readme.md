@@ -2,7 +2,7 @@
 # Coordinates Generator
 
 Its a simple interactive CLI App! This Node.js application generates coordinates for a specific zone, country, or city using OpenStreetMap data, Inquirer JS. 
-
+After input your preferences generated Co-ordinates will be stored into a data.json file.
 
 ### Installation 
 ```bash
