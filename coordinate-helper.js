@@ -5,9 +5,9 @@ const fs = require("fs");
 
 const answerRecievedAndGenerate = (answers) => {
   fetchCoOrdinates(answers.whichAddress).then((response) => {
-    let fetchFormattedData = response;
     if (response) {
-      if (answers.whichFromat != "osm-addresses") {
+      let fetchFormattedData = response;
+      if (answers.whichFromat != "osm-addresses-default") {
         fetchFormattedData = getformattedCordinates(
           response,
           answers.howManyRows,
